@@ -12,80 +12,61 @@
 
 </head>
 
-
 <body>
 
-
 <!-- Background Video -->
-
 <video autoplay muted loop class="bg-video">
-
-<source src="video/fashion.mp4" type="video/mp4">
-
+  <source src="video/fashion.mp4" type="video/mp4">
 </video>
 
+<!-- 🎧 Door Sound -->
+<audio id="doorSound" src="door.mp3" preload="auto"></audio>
 
 <!-- Overlay -->
-
 <div class="overlay"></div>
 
-
-
 <!-- Glass Wardrobe -->
-
 <div class="wardrobe-container" onclick="openWardrobe()">
 
+  <!-- Left Door -->
+  <div class="door left-door">
+    <div class="glass"></div>
+  </div>
 
-<!-- Left Door -->
+  <!-- Right Door -->
+  <div class="door right-door">
+    <div class="glass"></div>
+  </div>
 
-<div class="door left-door">
-
-<div class="glass"></div>
-
-</div>
-
-
-<!-- Right Door -->
-
-<div class="door right-door">
-
-<div class="glass"></div>
-
-</div>
-
-
-
-<!-- Center Text -->
-
-<div class="wardrobe-text">
-
-<h1>DIGITAL WARDROBE</h1>
-
-<p>Click to Open</p>
+  <!-- Center Text -->
+  <div class="wardrobe-text">
+    <h1>DIGITAL WARDROBE</h1>
+    <p>Click to Open</p>
+  </div>
 
 </div>
-
-</div>
-
-
 
 <script>
 
 function openWardrobe() {
 
-document.body.classList.add("open");
+  // 🎧 play sound
+  const sound = document.getElementById("doorSound");
+  if (sound) {
+    sound.currentTime = 0;
+    sound.play();
+  }
 
-setTimeout(function() {
+  // animation trigger
+  document.body.classList.add("open");
 
-window.location.href = "wardrobe.html";
-
-}, 1300);
+  setTimeout(function() {
+    window.location.href = "wardrobe.html";
+  }, 1300);
 
 }
 
 </script>
 
-
 </body>
-
 </html>
