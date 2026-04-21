@@ -15,37 +15,43 @@
 <!-- Background -->
 <div class="wardrobe-bg"></div>
 
-<!-- Top Title -->
+<!-- Header -->
 <div class="wardrobe-header">
   <h1>MY DIGITAL WARDROBE</h1>
   <p>Explore your pieces</p>
 </div>
 
-<!-- Clothing Grid -->
-<div class="wardrobe-grid">
+<!-- 🧥 Wardrobe Space -->
+<div class="wardrobe">
 
-  <div class="item">
-    <div class="item-img"></div>
+  <div class="hanger-item" onclick="openItem('dress1.html')">
+    <img src="img/dress1.jpg" />
     <p>Look 01</p>
   </div>
 
-  <div class="item">
-    <div class="item-img"></div>
+  <div class="hanger-item" onclick="openItem('dress2.html')">
+    <img src="img/dress2.jpg" />
     <p>Look 02</p>
   </div>
 
-  <div class="item">
-    <div class="item-img"></div>
+  <div class="hanger-item" onclick="openItem('dress3.html')">
+    <img src="img/dress3.jpg" />
     <p>Look 03</p>
   </div>
 
-  <div class="item">
-    <div class="item-img"></div>
+  <div class="hanger-item" onclick="openItem('dress4.html')">
+    <img src="img/dress4.jpg" />
     <p>Look 04</p>
   </div>
 
 </div>
 
-</body>
+<!-- JS -->
+<script>
+function openItem(page) {
+  window.location.href = page;
+}
+</script>
 
+</body>
 </html>
