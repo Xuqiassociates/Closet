@@ -50,18 +50,21 @@
 
 function openWardrobe() {
 
-  // 🎧 play sound
+  // 防止重复点击
+  if (document.body.classList.contains("open")) return;
+
+  document.body.classList.add("open");
+
+  // 🎧 声音
   const sound = document.getElementById("doorSound");
   if (sound) {
     sound.currentTime = 0;
     sound.play();
   }
 
-  // animation trigger
-  document.body.classList.add("open");
-
-  setTimeout(function() {
-    window.location.href = "wardrobe.html";
+  // 1.3秒后跳转到下一页
+  setTimeout(() => {
+    window.location.href = "./wardrobe.html";
   }, 1300);
 
 }
