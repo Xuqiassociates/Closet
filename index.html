@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Wardrobe</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- Background Video -->
+
+<video autoplay muted loop class="bg-video">
+
+<source src="video/fashion.mp4" type="video/mp4">
+
+</video>
+
+
+<!-- Overlay -->
+
+<div class="overlay"></div>
+
+
+
+<!-- Glass Wardrobe -->
+
+<div class="wardrobe-container" onclick="openWardrobe()">
+
+
+<!-- Left Door -->
+
+<div class="door left-door">
+
+<div class="glass"></div>
+
+</div>
+
+
+<!-- Right Door -->
+
+<div class="door right-door">
+
+<div class="glass"></div>
+
+</div>
+
+
+
+<!-- Center Text -->
+
+<div class="wardrobe-text">
+
+<h1>DIGITAL WARDROBE</h1>
+
+<p>Click to Open</p>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function openWardrobe() {
+
+document.body.classList.add("open");
+
+setTimeout(function() {
+
+window.location.href = "wardrobe.html";
+
+}, 1300);
+
+}
+
+</script>
+
+
+</body>
+
+</html>
