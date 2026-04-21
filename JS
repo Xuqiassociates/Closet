@@ -1,0 +1,4 @@
+document.querySelector(".wardrobe-container").onclick = () => {
+  document.body.classList.add("open");
+  document.getElementById("doorSound").play();
+};
